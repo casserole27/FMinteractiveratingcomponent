@@ -3,27 +3,110 @@ Frontend Mentor
 Interactive Rating Component
 C Lewis
 clewisdev.com
-September 2022
+October 2022
 */
+
+/****** VARIABLES ******/
+
+:root {
+    --primary-orange: hsl(25, 97%, 53%); 
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-light-grey: hsl(217, 12%, 63%);
+    --neutral-medium-grey: #7c8798;
+    --neutral-dark-blue: #252d37;
+    --neutral-very-dark-blue: #121417;
+
+    --br: 1rem;
+    
+    
+    
+    --ff: 'Overpass', sans-serif;
+
+    /*? FONT SIZES */
+    /*? 14px - 15px */
+    /*? 24px - 28px */
+    
+    --fs-s: max(15px, 14px);
+    --fs-m: max(28px, 24px);
+
+}
+
+/****** MOBILE FIRST DESIGN ******/
+
+/****** GLOBAL STYLING ******/
 
 * {
     margin: 0;
     padding: 0;
 }
 
-:root {
-    --primary-orange: hsl(25, 97%, 53%); 
-    --neutral-white: hsl(0, 0%, 100%);
-    --neutral-light-grey: hsl(217, 12%, 63%);
-    --neutral-medium-grey: hsl(216, 12%, 54%);
-    --neutral-dark-blue: hsl(213, 19%, 18%);
-    --neutral-very-dark-blue: hsl(216, 12%, 8%);
-    --br: border-radius: 1rem;
-    --fs: font-size: 1rem;
+body {
+    font-family: var(--ff);
+    background-color: black;
 }
 
-body {
-    font-family: 'Overpass', sans-serif;
+main {
+    background: linear-gradient(#252d37, #121417);
+    width: 300px;
+    border-radius: var(--br);
+    margin: 0 auto;
+    margin-top: 9.625rem;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: var(--fs-m);
+    color: var(--neutral-white);
+    padding-top: 1rem;
+}
+
+p {
+    font-size: var(--fs-s);
+    color: var(--neutral-light-grey);
+    padding-top: .625rem;
+    padding-bottom: 1.5rem;
+}
+
+/****** IMG ******/
+
+.star {
+    border: solid 1rem var(--neutral-dark-blue);
+    border-radius: 50%;
+}
+
+/****** RATING NUMBER STYLING ******/
+
+.ratings {
+    color: var(--neutral-light-grey);
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.number {
+    width: 15px;
+    height: 15px;
+    background-color: var(--neutral-dark-blue);
+    border: solid 1rem var(--neutral-dark-blue);
+    border-radius: 50%;
+    text-align: center;
+}
+
+/****** BUTTON STYLING ******/
+
+button {
+    font-family: var(--ff);
+    font-size: var(--fs-s);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.1875rem;
+    color: var(--neutral-white);
+    background-color: var(--primary-orange);
+    border: none;
+    width: 100%;
+    padding: .75rem;
+    border-radius: 2rem;
 }
 
 
