@@ -10,8 +10,8 @@ October 2022
 
 :root {
     --primary-orange: hsl(25, 97%, 53%); 
-    --neutral-white: hsl(0, 0%, 100%);
-    --neutral-light-grey: hsl(217, 12%, 63%);
+    --neutral-white: #ffffff;
+    --neutral-light-grey: #959eac;
     --neutral-medium-grey: #7c8798;
     --neutral-dark-blue: #252d37;
     --neutral-very-dark-blue: #121417;
@@ -49,18 +49,20 @@ main {
     background: linear-gradient(#252d37, #121417);
     /* max-width: 412px; */
     width: 327px;
+    height: 360px;
     border-radius: var(--br);
     margin: 0 auto;
     margin-top: 9.625rem;
-    /* padding: 1.5rem; */
+    padding: 1.5rem;
 }
 
 @media screen and (min-width: 800px) {
     main {
         width: 412px;
+        height: 416px;
         /* padding: 2.5rem; */
     }
-})
+}
 
 /* h1 */
 .title  { 
@@ -95,17 +97,33 @@ main {
 }
 
 .number {
-    width: 15px;
-    height: 15px;
+    width: 42px;
+    height: 42px;
     background-color: var(--neutral-dark-blue);
     border: solid 1rem var(--neutral-dark-blue);
     border-radius: 50%;
     text-align: center;
 }
 
+/* .ratings:hover { */
+/* } */
+
+.number:hover {
+    color: var(--neutral-white);
+    background-color: var(--primary-orange);
+    border: solid 1rem var(--primary-orange);
+}
+
+@media screen and (min-width: 800px) {
+    .number {
+        width: 51px;
+        height: 51px;
+    }
+}
+
 /****** BUTTON STYLING ******/
 
-button {
+.rating-button {
     font-family: var(--ff);
     font-size: var(--fs-s);
     font-weight: 700;
@@ -120,6 +138,11 @@ button {
     border-radius: 2rem;
 }
 
+.rating-button:hover {
+    background-color: var(--neutral-white);
+    color: var(--primary-orange);
+}
+
 /****** THANK YOU STATE ******/
 
 .thanks-img {
@@ -129,15 +152,26 @@ button {
     padding-bottom: 2rem;
 }
 
+.rating-selection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .25rem;
+    text-align: center;
+    padding: .5rem;
+    background-color: var(--neutral-dark-blue);
+    border-radius: 2rem;
+    width: 12rem;
+    margin: 0 auto;
+
+}
+
 /* p */
 .subtitle-selection {
     text-align: center;
     color: var(--primary-orange);
-    background-color: var(--neutral-dark-blue);
-    width: 12rem;
-    padding: .5rem;
-    margin: 0 auto;
-    border-radius: 2rem;
+    /* width: 12rem; */
+    /* padding: .5rem; */
 }
 
 /* h2 */
