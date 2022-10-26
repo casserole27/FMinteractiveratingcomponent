@@ -145,6 +145,10 @@ main {
 
 /****** THANK YOU STATE ******/
 
+.thank-you-state {
+    display: none;
+}
+
 .thanks-img {
     display: block;
     margin: 0 auto;
@@ -153,15 +157,15 @@ main {
 }
 
 .rating-selection {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: .25rem;
+    gap: .25rem; */
     text-align: center;
     padding: .5rem;
     background-color: var(--neutral-dark-blue);
     border-radius: 2rem;
-    width: 12rem;
+    width: 13rem;
     margin: 0 auto;
 
 }

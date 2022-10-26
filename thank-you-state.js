@@ -1,15 +1,10 @@
+let rating = document.getElementById('subtitle-selection');
 
-let rating1 = document.getElementById('1');
+let submit = document.getElementById('rating-button');
 
-let ratings = document.getElementById('selection');
-
-const ratingSelection = () => {
-    
-    if (rating === 1) {
-    ratings.innerHTML = '1';
-    }
-
+const showRating = () => {
+    rating.innerHTML = 'You selected 1 out of 5';
 }
 
-rating1.addEventListener('click', ratingSelection);
 
+submit.addEventListener('click', showRating);
