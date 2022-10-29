@@ -1,3 +1,10 @@
+/*
+Frontend Mentor
+Interactive Rating Component
+C Lewis
+clewisdev.com
+October 2022
+*/
 
 // Store 1 - 5 numbers in variables
 let selectionColor1 = document.getElementById('1');

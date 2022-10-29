@@ -47,9 +47,9 @@ body {
     background-color: black;
 }
 
+/* styling for both rating and thank you state main card */
 section {
     background: linear-gradient(#252d37, #121417);
-    /* max-width: 412px; */
     width: 327px;
     height: 360px;
     border-radius: var(--br);
@@ -123,8 +123,6 @@ section {
     text-align: center;
 }
 
-/* .ratings:hover { */
-/* } */
 
 .number:hover {
     color: var(--neutral-white);
