@@ -24,8 +24,10 @@ October 2022
     /*? 14px - 15px */
     /*? 24px - 28px */
     
-    --fs-s: max(15px, 14px);
-    --fs-m: max(28px, 24px);
+    --fs-s-mobile: 14px;
+    --fs-m-mobile: 24px;
+    --fs-s-desktop: 15px;
+    --fs-m-desktop: 28px;
 }
 
 /****** MOBILE FIRST DESIGN ******/
@@ -45,7 +47,7 @@ body {
     background-color: black;
 }
 
-main {
+section {
     background: linear-gradient(#252d37, #121417);
     /* max-width: 412px; */
     width: 327px;
@@ -57,35 +59,50 @@ main {
 }
 
 @media screen and (min-width: 800px) {
-    main {
+    section {
         width: 412px;
         height: 416px;
-        /* padding: 2.5rem; */
+        padding: 2rem;
     }
 }
 
-/* h1 */
-.title  { 
-    font-size: var(--fs-m);
-    color: var(--neutral-white);
-    padding-top: 1rem;
-}
 
-/* p */
-.subtitle {
-    font-size: var(--fs-s);
-    line-height: 1.375rem;
-    color: var(--neutral-light-grey);
-    padding-top: .625rem;
-    padding-bottom: 1.5rem;
-}
-
-/****** IMG ******/
+/****** STAR IMG ******/
 
 .star {
     border: solid 1rem var(--neutral-dark-blue);
     border-radius: 50%;
 }
+
+/****** TITLE AND SUBTITLE STYLING ******/
+
+/* h1 */
+.title  { 
+    font-size: var(--fs-m-mobile);
+    color: var(--neutral-white);
+    padding-top: 1rem;
+    padding-bottom: .625rem;
+}
+
+/* p */
+.subtitle {
+    font-size: var(--fs-s-mobile);
+    line-height: 1.375rem;
+    color: var(--neutral-light-grey);
+    padding-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 800px) {
+    .title {
+        font-size: var(--fs-m-desktop);
+        padding-top: 1.875rem;
+    }
+    
+    .subtitle {
+        font-size: var(--fs-s-desktop);
+    }
+}
+
 
 /****** RATING NUMBER STYLING ******/
 
@@ -97,6 +114,7 @@ main {
 }
 
 .number {
+    font-size: var(--fs-s-mobile);
     width: 42px;
     height: 42px;
     background-color: var(--neutral-dark-blue);
@@ -115,7 +133,12 @@ main {
 }
 
 @media screen and (min-width: 800px) {
+    .ratings {
+        padding-bottom: 2rem;
+    }
+    
     .number {
+        font-size: 1rem;
         width: 51px;
         height: 51px;
     }
@@ -125,7 +148,7 @@ main {
 
 .rating-button {
     font-family: var(--ff);
-    font-size: var(--fs-s);
+    font-size: var(--fs-s-mobile);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -134,8 +157,9 @@ main {
     background-color: var(--primary-orange);
     border: none;
     width: 100%;
-    padding: .75rem;
+    padding: 1rem;
     border-radius: 2rem;
+    margin-bottom: 2rem;
 }
 
 .rating-button:hover {
@@ -143,60 +167,97 @@ main {
     color: var(--primary-orange);
 }
 
+@media screen and (min-width: 800px) {
+    .rating-button {
+        font-size: var(--fs-s-desktop);
+    }
+}
+
 /****** THANK YOU STATE ******/
 
-.thank-you-state {
+/*! JAVASCRIPT ******/
+.rating-state {
+    display: block;
+}
+
+.thank-state {
     display: none;
 }
+/*! JS END ******/
+
+/****** THANK YOU IMG ******/
 
 .thanks-img {
     display: block;
     margin: 0 auto;
-    padding-top: 2.8125rem;
-    padding-bottom: 2rem;
+    padding-top: .625rem;
+    padding-bottom: 1.5rem;
 }
 
-.rating-selection {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: .25rem; */
-    text-align: center;
-    padding: .5rem;
-    background-color: var(--neutral-dark-blue);
-    border-radius: 2rem;
-    width: 13rem;
-    margin: 0 auto;
-
-}
+/****** RATING SELECTION TEXT ******/
 
 /* p */
-.subtitle-selection {
+.selection-msg {
     text-align: center;
+    font-size: var(--fs-s-mobile);
     color: var(--primary-orange);
-    /* width: 12rem; */
-    /* padding: .5rem; */
+    background-color: var(--neutral-dark-blue);
+    width: 10.5rem;
+    padding: .5rem;
+    border-radius: 2rem;
+    margin: 0 auto;
+}
+
+/* span */
+..user-rating {
+    font-size: var(--fs-s-mobile);
+    color: var(--primary-orange);
 }
 
 /* h2 */
 .title-thanks {
-    font-size: var(--fs-m);
+    font-size: var(--fs-m-mobile);
     text-align: center;
     color: var(--neutral-white);
-    padding-top: 2rem; 
+    padding-top: 1.5625rem; 
     padding-bottom: .625rem;
 }
 
 /* p */
 .subtitle-appreciation {
-    font-size: .9375em;
-    line-height: 1.5rem;
+    font-size: var(--fs-s-mobile);
+    line-height: 1.375rem;
     text-align: center;
     color: var(--neutral-light-grey);
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    padding-bottom: 2.8125rem;
+    padding-bottom: .8125rem;
 
+}
+
+@media screen and (min-width: 800px) {
+    
+    .thanks-img {
+        padding-top: .8125rem;
+        padding-bottom: 2rem;
+    }
+    
+    .selection-msg, .user-rating {
+        font-size: var(--fs-s-desktop);
+    }
+
+    .selection-msg {
+        width: 12.0625rem;
+    }
+
+    .title-thanks {
+        font-size: var(--fs-m-desktop);
+        padding-top: 2rem;
+        padding-bottom: .4375rem;
+    }
+
+    .subtitle-appreciation {
+        font-size: var(--fs-s-desktop);
+        line-height: 1.5rem;
+    }
 }
 
 /*

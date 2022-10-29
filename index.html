@@ -25,8 +25,9 @@ October 2022
 -->
 
 <body>
+<main>
 
-  <main class="rating-state" id="rating-state">
+  <section class="rating-state" id="rating-state">
 
   <!-- Rating state start -->
 
@@ -45,19 +46,39 @@ October 2022
   <div class="number" id="5">5</div>
   </div> <!--ratings closing div-->
 
-  <form action="/thank-you-state.html">
-    <input type="submit" value="submit" class="rating-button" id="rating-button">
-  </form>
-
-  <!-- <button class="submit" id="submit" type="button">
-    Submit</button> -->
+  <button class="rating-button" id="rating-button" type="button">
+    Submit</button>
 
   <!-- Rating state end -->
 
   
-</main>    
+  </section>
 
-<script src=" ratingcomponent.js"></script>
+  <section class="thank-state" id="thank-state">
+
+  <!-- Thank you state start -->
+
+  <img src="images/illustration-thank-you.svg" 
+  class="thanks-img" id="thanks-img" alt="">
+
+  <div class="rating-selection">
+    <p class="selection-msg" id="selection-msg">You selected <span class="user-rating" id="user-rating"></span> out of 5</p>
+  </div> <!--closing div for subtitle-selection -->  
+
+  <h2 class="title-thanks" id="title-thanks">Thank you!</h2>
+
+  <p class="subtitle-appreciation" id="subtitle-appreciation">We appreciate you taking the time to give a rating. If you ever need more support, 
+  don't hesitate to get in touch!</p>
+
+  <!-- Thank you state end -->
+
+  </section>
+
+
+</main>
+
+<script src="ratingcomponent.js"></script>
+
 
 </body>
 </html>
