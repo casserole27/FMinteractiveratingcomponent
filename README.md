@@ -61,6 +61,8 @@ Consult Figma design files
  - commit and push after each major change
 Add JavaScript file
  - add a script file for site interactivity
+ - define variables of elements to pull from the DOM
+ - create functions for specified interactivity
 Check markup and accessibility
 (https://validator.w3.org/)
 (https://wave.webaim.org/)
@@ -74,7 +76,6 @@ Check markup and accessibility
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 - vanilla JavaScript
 
