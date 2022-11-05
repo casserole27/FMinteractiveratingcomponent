@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL](https://your-solution-url.com)
+- Solution URL: [solution URL](https://www.frontendmentor.io/solutions/interactive-rating-component-using-vanilla-javascript-jFheMewTA1)
 - Live Site URL: [live site URL](https://www.clewisdev.com/FMinteractiveratingcomponent/)
 
 ## My process
@@ -80,6 +80,8 @@ Check markup and accessibility
 - vanilla JavaScript
 
 ### What I learned
+
+This is my second project using the Figma files. Still focusing on precision and responsiveness using the least amount of code.
 
 I learned about: 
 ```css
