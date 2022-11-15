@@ -48,7 +48,7 @@ body {
 }
 
 /* styling for both rating and thank you state main card */
-section {
+/* section {
     background: linear-gradient(#252d37, #121417);
     width: 327px;
     height: 360px;
@@ -64,33 +64,36 @@ section {
         height: 416px;
         padding: 2rem;
     }
-}
+} */
 
 
 /****** STAR IMG ******/
 
 .star {
     border: solid 1rem var(--neutral-dark-blue);
+    background-color: var(--neutral-dark-blue);
     border-radius: 50%;
 }
 
 /****** TITLE AND SUBTITLE STYLING ******/
+/*! ADDED LEGEND ******/
 
 /* h1 */
 .title  { 
     font-size: var(--fs-m-mobile);
     color: var(--neutral-white);
     padding-top: 1rem;
-    padding-bottom: .625rem;
+    padding-bottom: 2rem;
 }
 
-/* p */
-.subtitle {
+/* p
+.subtitle 
+legend {
     font-size: var(--fs-s-mobile);
     line-height: 1.375rem;
     color: var(--neutral-light-grey);
     padding-bottom: 1.5rem;
-}
+} */
 
 @media screen and (min-width: 800px) {
     .title {
@@ -98,33 +101,95 @@ section {
         padding-top: 1.875rem;
     }
     
-    .subtitle {
+    /* .subtitle 
+    legend {
         font-size: var(--fs-s-desktop);
-    }
+    } */
 }
 
 
 /****** RATING NUMBER STYLING ******/
 
-.ratings {
+/* .ratings
+[type = 'radio'] {
     color: var(--neutral-light-grey);
     padding-bottom: 1.5rem;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; 
+} */
+
+/* form {
+    padding: 1rem;
+} */
+
+
+/* LABEL TEXT COLOR - NUMBER */ 
+label {
+    color: var(--neutral-white);
 }
 
-.number {
-    font-size: var(--fs-s-mobile);
+/*! RADIO BUTTON STYLE ******/
+/*? https://www.youtube.com/watch?v=MZq5zFSpUlo */
+/*TODO Kevin Powell Videos
+/* TODO https://www.youtube.com/watch?v=MRahw3qnRBQ
+/* TODO https://www.youtube.com/watch?v=EtTFEiHFjF4
+/* TODO https://www.youtube.com/watch?v=zGiirUiWslI
+/* TODO https://www.youtube.com/watch?v=0GcTUor2ANw
+*/
+
+
+/** LABEL */
+.radio-btn {
+    /* font-size: var(--fs-s-mobile); */
     width: 42px;
     height: 42px;
-    background-color: var(--neutral-dark-blue);
-    border: solid 1rem var(--neutral-dark-blue);
+    border: 2px solid #ffffff;
     border-radius: 50%;
-    text-align: center;
+    margin-left: 1rem;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*! Why are the radio buttons vertical?
+    /*! They don't size correctly without display: flex
+    /*! But display: flex makes them veritcal?
+
+    /* background-color: var(--neutral-dark-blue); */
+    /* border: solid 1rem var(--neutral-dark-blue); */
+
+    /*! This will make the button a solid color, but the 
+    /*! interactive functionality disappears*/
+}
+
+/*TODO Find out what putting these classes together means for the cascade.*/
+
+/** LABEL PLUS SPAN */
+.radio-btn .radio-btn-checked {
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    /* background-color: var(--primary-orange); */
+}
+
+/** REMOVES DEFAULT RADIO BUTTON STYLING? */
+.radio-btn input {
+    display: none;
+}
+
+/** BEHAVIOR WHEN CHECKED? */
+.radio-btn input:checked + .radio-btn-checked {
+    opacity: 1;
+
 }
 
 
-.number:hover {
+
+/* .number:hover {
     color: var(--neutral-white);
     background-color: var(--primary-orange);
     border: solid 1rem var(--primary-orange);
@@ -140,11 +205,11 @@ section {
         width: 51px;
         height: 51px;
     }
-}
+} */
 
 /****** BUTTON STYLING ******/
 
-.rating-button {
+.submit-btn {
     font-family: var(--ff);
     font-size: var(--fs-s-mobile);
     font-weight: 700;
@@ -157,16 +222,17 @@ section {
     width: 100%;
     padding: 1rem;
     border-radius: 2rem;
+    margin-top: 4rem;
     margin-bottom: 2rem;
 }
 
-.rating-button:hover {
+.submit-btn:hover {
     background-color: var(--neutral-white);
     color: var(--primary-orange);
 }
 
 @media screen and (min-width: 800px) {
-    .rating-button {
+    .submit-btn {
         font-size: var(--fs-s-desktop);
     }
 }
