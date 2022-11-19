@@ -55,14 +55,14 @@ section {
     border-radius: var(--br);
     margin: 0 auto;
     margin-top: 9.625rem;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
 }
 
 @media screen and (min-width: 800px) {
     section {
         width: 412px;
         height: 416px;
-        padding: 2rem;
+        /* padding: 2rem; */
     }
 }
 
@@ -70,9 +70,13 @@ section {
 /****** STAR IMG ******/
 
 .star {
+    position: relative;
+    top: 2rem;
+    left: 2rem;
     border: solid 1rem var(--neutral-dark-blue);
     background-color: var(--neutral-dark-blue);
     border-radius: 50%;
+    margin-bottom: 1.875rem;
 }
 
 /****** TITLE AND SUBTITLE STYLING ******/
@@ -82,18 +86,19 @@ section {
 .title  { 
     font-size: var(--fs-m-mobile);
     color: var(--neutral-white);
-    padding-top: 1rem;
-    padding-bottom: 2rem;
+    padding-left: 2rem;
 }
 
-/* p
-.subtitle 
-legend {
+/* p */
+.subtitle {
     font-size: var(--fs-s-mobile);
     line-height: 1.375rem;
     color: var(--neutral-light-grey);
-    padding-bottom: 1.5rem;
-} */
+    padding-top: .4375rem; 
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 1.5rem;
+}
 
 @media screen and (min-width: 800px) {
     .title {
@@ -101,28 +106,10 @@ legend {
         padding-top: 1.875rem;
     }
     
-    /* .subtitle 
-    legend {
+    .subtitle {
         font-size: var(--fs-s-desktop);
-    } */
+    }
 }
-
-
-/****** RATING NUMBER STYLING ******/
-
-/* .ratings
-[type = 'radio'] {
-    color: var(--neutral-light-grey);
-    padding-bottom: 1.5rem;
-    /* display: flex; */
-    /* justify-content: space-between; 
-} */
-
-/* form {
-    padding: 1rem;
-} */
-
-
 
 
 /*! RADIO BUTTON STYLE ******/
@@ -143,6 +130,10 @@ legend {
 /** OPACITY IS THE MOST ACCESSIBLE
 /** they are still there, but you can't see them */
 
+label {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
 
 [type="radio"] {
     opacity: 0;
@@ -151,21 +142,23 @@ legend {
 [type="radio"] + label {
     position: relative;
     padding-left: 2rem;
+    padding-right: .75rem;
     cursor: pointer;
     display: inline-block;
     color: var(--neutral-white);
+    transition: opacity 0.5s ease;
 }
 
 [type="radio"] + label::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 12px;
+    top: -18px;
     width: 51px;
     height: 51px;
-    padding: .25rem;
     background-color: var(--neutral-dark-blue);
     border-radius: 100%;
+    opacity: .5;
 }    
 
 [type="radio"]:hover + label::before {
@@ -174,90 +167,14 @@ legend {
 
 [type="radio"]:focus + label::before {
     background: var(--neutral-light-grey);
-}
-
-
-
-/** LABEL 
-.radio-btn {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    margin-left: 1rem;
-    padding: .5rem;
     
-
-    ! Why are the radio buttons vertical?
-    ! They don't size correctly without display: flex
-    ! But display: flex makes them veritcal?
-
-    background-color: var(--neutral-dark-blue);
-    border: solid 1rem var(--neutral-dark-blue);
-
-    ! This will make the button a solid color, but the 
-    ! interactive functionality disappears
-}*/
-
-
-
-/*TODO Find out what putting these classes together means for the cascade.*/
-
-/* label::before{
-    content: '';
-    height: 25px;
-    width: 25px;
-    border: 2px solid #ffffff;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-} */
-
-
-/** LABEL PLUS SPAN 
- .radio-btn .radio-btn-checked {
-    width: calc(100% - 6px);
-    height: calc(100% - 6px);
-    border-radius: 50%;
-    background-color: #ffffff;
-    display: inline-block;
-    opacity: 0;
-    transition: opacity 0.5s ease;
 }
-
- REMOVES DEFAULT RADIO BUTTON STYLING? 
-.radio-btn input {
-    display: none;
-}
-
-BEHAVIOR WHEN CHECKED? 
-.radio-btn input:checked + .radio-btn-checked {
-    opacity: 1;
-    background-color: var(--primary-orange);
-
-}*/ 
-
-
-/* .number:hover {
-    color: var(--neutral-white);
-    background-color: var(--primary-orange);
-    border: solid 1rem var(--primary-orange);
-}
-
-@media screen and (min-width: 800px) {
-    .ratings {
-        padding-bottom: 2rem;
-    }
-    
-    .number {
-        font-size: 1rem;
-        width: 51px;
-        height: 51px;
-    }
-} */
 
 /****** BUTTON STYLING ******/
 
 .submit-btn {
+    position: relative;
+    left: 2rem;
     font-family: var(--ff);
     font-size: var(--fs-s-mobile);
     font-weight: 700;
@@ -267,11 +184,11 @@ BEHAVIOR WHEN CHECKED?
     color: var(--neutral-white);
     background-color: var(--primary-orange);
     border: none;
-    width: 100%;
-    padding: 1rem;
+    width: 85%;
+    padding: .8rem;
     border-radius: 2rem;
-    margin-top: 4rem;
     margin-bottom: 2rem;
+    
 }
 
 .submit-btn:hover {
