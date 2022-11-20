@@ -109,13 +109,13 @@ section {
     .title {
         font-size: var(--fs-m-desktop);
         padding-top: 1.875rem;
-        padding-left: 1.5rem;
+        /* padding-left: 1.5rem; */
     }
     
     .subtitle {
        font-size: var(--fs-s-desktop);
-       padding-left: 1.5rem;
-       padding-right: 1.5rem;
+       /* padding-left: 1.5rem; */
+       /* padding-right: 1.5rem; */
     }
 }
 
