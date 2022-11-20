@@ -55,14 +55,12 @@ section {
     border-radius: var(--br);
     margin: 0 auto;
     margin-top: 9.625rem;
-    /* padding: 1.5rem; */
 }
 
 @media screen and (min-width: 800px) {
     section {
         width: 412px;
         height: 416px;
-        /* padding: 2rem; */
     }
 }
 
@@ -77,6 +75,13 @@ section {
     background-color: var(--neutral-dark-blue);
     border-radius: 50%;
     margin-bottom: 1.875rem;
+}
+
+@media screen and (max-width: 800px) {
+    .star {
+        top: 1.5rem;
+        left: 1.5rem;
+    }
 }
 
 /****** TITLE AND SUBTITLE STYLING ******/
@@ -104,10 +109,13 @@ section {
     .title {
         font-size: var(--fs-m-desktop);
         padding-top: 1.875rem;
+        padding-left: 1.5rem;
     }
     
     .subtitle {
-        font-size: var(--fs-s-desktop);
+       font-size: var(--fs-s-desktop);
+       padding-left: 1.5rem;
+       padding-right: 1.5rem;
     }
 }
 
@@ -130,10 +138,18 @@ section {
 /** OPACITY IS THE MOST ACCESSIBLE
 /** they are still there, but you can't see them */
 
+.input-div {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding-left: 1rem;
+}
+
 label {
     margin-top: 1.5rem;
     margin-bottom: 3rem;
 }
+
 
 [type="radio"] {
     opacity: 0;
@@ -141,10 +157,7 @@ label {
 
 [type="radio"] + label {
     position: relative;
-    padding-left: 2rem;
-    padding-right: .75rem;
     cursor: pointer;
-    display: inline-block;
     color: var(--neutral-white);
     transition: opacity 0.5s ease;
 }
@@ -152,7 +165,7 @@ label {
 [type="radio"] + label::before {
     content: '';
     position: absolute;
-    left: 12px;
+    left: -20px;
     top: -18px;
     width: 51px;
     height: 51px;
@@ -169,6 +182,27 @@ label {
     background: var(--neutral-light-grey);
     
 }
+
+@media screen and (max-width: 800px) {
+    .input-div {
+        gap: 1.15rem;
+        padding-left: .5rem;
+    }
+
+    [type="radio"] + label::before {
+        left: -16px;
+        top: -14px;
+        width: 42px;
+        height: 42px;
+    }
+
+    label {
+        margin-top: .5rem;
+        margin-bottom: 2rem;
+    }
+
+  }
+
 
 /****** BUTTON STYLING ******/
 
