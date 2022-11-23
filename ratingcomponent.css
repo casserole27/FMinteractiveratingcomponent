@@ -69,18 +69,18 @@ section {
 
 .star {
     position: relative;
-    top: 2rem;
-    left: 2rem;
+    top: 1.5rem;
+    left: 1.5rem;
     border: solid 1rem var(--neutral-dark-blue);
     background-color: var(--neutral-dark-blue);
     border-radius: 50%;
     margin-bottom: 1.875rem;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) {
     .star {
-        top: 1.5rem;
-        left: 1.5rem;
+        top: 2rem;
+        left: 2rem;
     }
 }
 
@@ -91,7 +91,7 @@ section {
 .title  { 
     font-size: var(--fs-m-mobile);
     color: var(--neutral-white);
-    padding-left: 2rem;
+    padding-left: 1.5rem;
 }
 
 /* p */
@@ -100,8 +100,8 @@ section {
     line-height: 1.375rem;
     color: var(--neutral-light-grey);
     padding-top: .4375rem; 
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
@@ -109,13 +109,13 @@ section {
     .title {
         font-size: var(--fs-m-desktop);
         padding-top: 1.875rem;
-        /* padding-left: 1.5rem; */
+        padding-left: 2rem;
     }
     
     .subtitle {
        font-size: var(--fs-s-desktop);
-       /* padding-left: 1.5rem; */
-       /* padding-right: 1.5rem; */
+       padding-left: 2rem;
+       padding-right: 2rem;
     }
 }
 
@@ -141,15 +141,14 @@ section {
 .input-div {
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
-    padding-left: 1rem;
+    gap: 1.15rem;
+    padding-left: .5rem;
 }
 
 label {
-    margin-top: 1.5rem;
-    margin-bottom: 3rem;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
 }
-
 
 [type="radio"] {
     opacity: 0;
@@ -165,10 +164,10 @@ label {
 [type="radio"] + label::before {
     content: '';
     position: absolute;
-    left: -20px;
-    top: -18px;
-    width: 51px;
-    height: 51px;
+    left: -16px;
+    top: -14px;
+    width: 42px;
+    height: 42px;
     background-color: var(--neutral-dark-blue);
     border-radius: 100%;
     opacity: .5;
@@ -183,29 +182,28 @@ label {
     
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) {
     .input-div {
-        gap: 1.15rem;
-        padding-left: .5rem;
+        gap: 1.5rem;
+        padding-left: 1rem;
     }
 
     [type="radio"] + label::before {
-        left: -16px;
-        top: -14px;
-        width: 42px;
-        height: 42px;
+        left: -20px;
+        top: -18px;
+        width: 51px;
+        height: 51px;
     }
 
     label {
-        margin-top: .5rem;
-        margin-bottom: 2rem;
-    }
-
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+    }  
   }
 
 
 /****** BUTTON STYLING ******/
-
+  
 .submit-btn {
     position: relative;
     left: 2rem;
@@ -219,6 +217,7 @@ label {
     background-color: var(--primary-orange);
     border: none;
     width: 85%;
+    cursor: pointer;
     padding: .8rem;
     border-radius: 2rem;
     margin-bottom: 2rem;
