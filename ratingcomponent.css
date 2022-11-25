@@ -16,7 +16,7 @@ October 2022
     --neutral-dark-blue: #252d37;
     --neutral-very-dark-blue: #121417;
 
-    --br: 1rem;
+    --br: 1.875rem;
     
     --ff: 'Overpass', sans-serif;
 
@@ -252,7 +252,7 @@ label {
 .thanks-img {
     display: block;
     margin: 0 auto;
-    padding-top: .625rem;
+    padding-top: 2.125rem;
     padding-bottom: 1.5rem;
 }
 
@@ -281,8 +281,7 @@ label {
     font-size: var(--fs-m-mobile);
     text-align: center;
     color: var(--neutral-white);
-    padding-top: 1.5625rem; 
-    padding-bottom: .625rem;
+    padding-top: 1.5rem; 
 }
 
 /* p */
@@ -291,14 +290,14 @@ label {
     line-height: 1.375rem;
     text-align: center;
     color: var(--neutral-light-grey);
-    padding-bottom: .8125rem;
+    padding: .625rem 1.5rem .8125rem 2rem;
 
 }
 
 @media screen and (min-width: 800px) {
     
     .thanks-img {
-        padding-top: .8125rem;
+        padding-top: 2.8125rem;
         padding-bottom: 2rem;
     }
     
@@ -313,12 +312,12 @@ label {
     .title-thanks {
         font-size: var(--fs-m-desktop);
         padding-top: 2rem;
-        padding-bottom: .4375rem;
     }
 
     .subtitle-appreciation {
         font-size: var(--fs-s-desktop);
         line-height: 1.5rem;
+        padding: .4375rem 2.1rem 2.8125rem 2.1rem;
     }
 }
 
