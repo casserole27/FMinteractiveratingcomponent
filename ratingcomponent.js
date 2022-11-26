@@ -23,12 +23,9 @@ let thankPage = document.getElementById('thank-state');
 const inputValue = () => {
     ratingPage.style.display = 'none';
     thankPage.style.display = 'block';
-    // let input = document.querySelectorAll('input');
-    let input = document.getElementsByName('rating');
+    let input = document.querySelectorAll('input');
 
     for (let i = 0; i < input.length; i++) {
-        console.log(input[i]);
-        console.log(input[i].checked)
         if (input[i].checked) {
             document.getElementById('user-rating').innerHTML = 
             input[i].value;

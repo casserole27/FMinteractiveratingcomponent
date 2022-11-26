@@ -91,32 +91,39 @@ I learned about:
 ```
 so that the padding styling does not interfere with the sizing I am trying to achieve.
 
-I was able to put both "cards" in one HTML file using section tags, and then switch between them using JavaScript. At first I thought it would be two files with a submit action, but I believe the flow to be better and simpler within JS. The tricky part of this is naming classes and IDs appropriately so that each "card" has it's appropriate styling and 
+Pseudo-classes specify special states of selected elements and are designated with one colon.
+Pseudo-elements allow you to style part of the element and are designated with two colons.
 
-Code that I'm proud of:
+In this case ::before creates a pseudo-element that is the first child of the selected element, and is used to make the custom radio button.
+:hover changes the color of the element when the mouse hovers over it
+:checked changes the color of the selected radio input
 
 ```css
-/*! JAVASCRIPT ******/
-.rating-state {
-    display: block;
+[type="radio"]:hover + label::before {
+    background-color: var(--primary-orange);
 }
 
-.thank-state {
-    display: none;
+[type="radio"]:checked + label::before {
+    background: var(--neutral-light-grey);
+    
 }
-/*! JS END ******/
 ```
 
-```js
-// Rating and Thank you states
-let ratingPage = document.getElementById('rating-state');
-let thankPage = document.getElementById('thank-state');
+Code that I'm proud of:
+Using iteration/loops in a for real document to iterate over the radio inputs.
 
-// function to display thank you state instead of rating state
-const showState =  () => {
+```js
+const inputValue = () => {
     ratingPage.style.display = 'none';
     thankPage.style.display = 'block';
-} 
+    let input = document.querySelectorAll('input');
+
+    for (let i = 0; i < input.length; i++) {
+        if (input[i].checked) {
+            document.getElementById('user-rating').innerHTML = 
+            input[i].value;
+        }
+    }}; 
 ```
 
 Finally, after running markup and accessibility checkups, I made my own tweaks to the design. The provided colors did not give a proper contrast ratio for accessibility, so I changed the primary orange color to a slightly darker orange.
@@ -124,6 +131,9 @@ Finally, after running markup and accessibility checkups, I made my own tweaks t
 ### Continued development
 
 For CSS I'm still very stuck on min(), max(), min-width, and max-width. I feel like if I could solidify this knowledge, I would achieve the responsiveness I am looking for. However, it doesn't seem to achieve what I am expecting it to do.
+
+### SEE UPDATE BELOW ON JS / PROJECT UPDATE
+I'm leaving this info here for learning purposes.
 
 MY JAVASCRIPT IS SO VERY CLUNKY, but it works. I am absolutely certain there is an easier way to achieve the interactivity of this component. I would like to continue to go through the JS with some of the ideas I have notated in the file, and I would like to ask some other more skilled developers what they would do.
 
@@ -142,6 +152,18 @@ let selectionColor5 = document.getElementById('5');
 //! Can I do this with a .forEach()?
 ```
 
+### JAVASCRIPT AND OVERALL PROJECT UPDATE
+
+HTML - changed to a form
+Interactive pages must be codes with interactive elements, not divs or spans.
+
+CSS - button colors and styles change here with pseudo-classes/elements instead of JS.
+
+JAVASCRIPT - I learned how to iterate over the inputs in order select the value of a checked radio box. I went from 60 lines of code to 17.
+
+I put my incorrect HTML and clunky JS in "spaghetti" files for later learning reference.
+
+
 ### Useful resources
 
  - CSS padding affecting width: [Stack Overflow](https://stackoverflow.com/questions/779434/how-do-i-prevent-the-padding-property-from-changing-width-or-height-in-css)
@@ -157,6 +179,8 @@ let selectionColor5 = document.getElementById('5');
 - CSS Before and After pseudo elements explained - part two: the content property: [YouTube](https://www.youtube.com/watch?v=xoRbkm8XgfQ)
 
 - Pseudo-elements [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+
+- Pseudo-classes [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
 
 - Position [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 
@@ -182,5 +206,5 @@ For review:
 - LinkedIn - [LinkedIn](https://www.linkedin.com/in/clewisdev/)
 
 ## Acknowledgments
-
+Frontend Mentor @grace-snow: she told me about the HTML form and the CSS styling. "Keep the concerns separate" 
 
