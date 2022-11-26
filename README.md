@@ -89,14 +89,10 @@ I learned about:
   box-sizing: border-box;
 }
 ```
-so that the padding styling does not interfere with the sizing I am trying to achieve.
 
-Pseudo-classes specify special states of selected elements and are designated with one colon.
-Pseudo-elements allow you to style part of the element and are designated with two colons.
+With border-box sizing, padding styling does not interfere with the sizing I am trying to achieve.
 
-In this case ::before creates a pseudo-element that is the first child of the selected element, and is used to make the custom radio button.
-:hover changes the color of the element when the mouse hovers over it
-:checked changes the color of the selected radio input
+
 
 ```css
 [type="radio"]:hover + label::before {
@@ -109,8 +105,14 @@ In this case ::before creates a pseudo-element that is the first child of the se
 }
 ```
 
+Pseudo-classes specify special states of selected elements and are designated with one colon.
+Pseudo-elements allow you to style part of the element and are designated with two colons.
+
+In this case ::before creates a pseudo-element that is the first child of the selected element, and is used to make the custom radio buttons. Pseudo-classes :hover changes the color of the element when the cursor hovers over it while
+:checked changes the color of the radio input after it is selected.
+
+
 Code that I'm proud of:
-Using iteration/loops in a for real document to iterate over the radio inputs.
 
 ```js
 const inputValue = () => {
@@ -125,6 +127,9 @@ const inputValue = () => {
         }
     }}; 
 ```
+
+I used iteration/loops in an actual document/project to iterate over the radio inputs. In this case, document.queryselectorAll() selects everything tagged with an input and stores it to the variable "input." Using that variable, I can iterate over the inputs and apply an if statement. If the one that is checked is true, the value is submitted innerHTML of a span. This reinforces to the user which rating they have selected.
+
 
 Finally, after running markup and accessibility checkups, I made my own tweaks to the design. The provided colors did not give a proper contrast ratio for accessibility, so I changed the primary orange color to a slightly darker orange.
 
@@ -159,7 +164,7 @@ Interactive pages must be codes with interactive elements, not divs or spans.
 
 CSS - button colors and styles change here with pseudo-classes/elements instead of JS.
 
-JAVASCRIPT - I learned how to iterate over the inputs in order select the value of a checked radio box. I went from 60 lines of code to 17.
+JAVASCRIPT - I learned how to iterate over the inputs in order select the value of a checked radio box. I went from 60 lines of code to 17. I did a .forEach() in one trial, but I ended up going with a for loop / if statement instead. 
 
 I put my incorrect HTML and clunky JS in "spaghetti" files for later learning reference.
 
@@ -206,5 +211,5 @@ For review:
 - LinkedIn - [LinkedIn](https://www.linkedin.com/in/clewisdev/)
 
 ## Acknowledgments
-Frontend Mentor @grace-snow: she told me about the HTML form and the CSS styling. "Keep the concerns separate" 
+Frontend Mentor @grace-snow: she told me about the HTML form and the CSS styling. "Keep the concerns separate" (regarding HTML, CSS, and JS) is very valuable information that I'm taking away from this project.
 
