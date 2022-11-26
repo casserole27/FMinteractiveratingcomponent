@@ -175,13 +175,13 @@ I put my incorrect HTML and clunky JS in "spaghetti" files for later learning re
 
  - CSS box-sizing: [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
 
- - Pure CSS Custom Radio Buttons Tutorial: [YouTube](https://www.youtube.com/watch?v=BT7FZooiqWw)
+ - Follow Andrew: pure CSS Custom Radio Buttons Tutorial: [YouTube](https://www.youtube.com/watch?v=BT7FZooiqWw)
 
-- Styling forms just got easier with accent-color: [YouTube](https://www.youtube.com/watch?v=MRahw3qnRBQ)
+- Kevin Powell: styling forms just got easier with accent-color: [YouTube](https://www.youtube.com/watch?v=MRahw3qnRBQ)
 
-- Before and After pseudo elements explained - part one: how they work: [YouTube](https://www.youtube.com/watch?v=zGiirUiWslI)
+- Kevin Powell: Before and After pseudo elements explained - part one: how they work: [YouTube](https://www.youtube.com/watch?v=zGiirUiWslI)
 
-- CSS Before and After pseudo elements explained - part two: the content property: [YouTube](https://www.youtube.com/watch?v=xoRbkm8XgfQ)
+- Kevin Powell: CSS Before and After pseudo elements explained - part two: the content property: [YouTube](https://www.youtube.com/watch?v=xoRbkm8XgfQ)
 
 - Pseudo-elements [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
 
@@ -211,5 +211,8 @@ For review:
 - LinkedIn - [LinkedIn](https://www.linkedin.com/in/clewisdev/)
 
 ## Acknowledgments
+
+Kevin Powell's CSS YouTube tutorials
+
 Frontend Mentor @grace-snow: she told me about the HTML form and the CSS styling. "Keep the concerns separate" (regarding HTML, CSS, and JS) is very valuable information that I'm taking away from this project.
 
