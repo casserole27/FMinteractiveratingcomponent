@@ -177,7 +177,7 @@ label {
     background-color: var(--primary-orange);
 }
 
-[type="radio"]:focus + label::before {
+[type="radio"]:checked + label::before {
     background: var(--neutral-light-grey);
     
 }
