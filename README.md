@@ -137,6 +137,51 @@ Finally, after running markup and accessibility checkups, I made my own tweaks t
 
 For CSS I'm still very stuck on min(), max(), min-width, and max-width. I feel like if I could solidify this knowledge, I would achieve the responsiveness I am looking for. However, it doesn't seem to achieve what I am expecting it to do.
 
+I haven't worked a whole lot with CSS positioning before this project. I'm wondering if there is a better way to do this, because I had to eyeball where the numbers belong both in the mobile and desktop versions.
+
+Mobile design:
+```css
+[type="radio"] + label::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: -14px;
+    width: 42px;
+    height: 42px;
+    background-color: var(--neutral-dark-blue);
+    border-radius: 100%;
+    opacity: .5;
+} 
+```
+
+Desktop design:
+```css
+
+@media screen and (min-width: 800px) {
+    .input-div {
+        gap: 1.5rem;
+        padding-left: 1rem;
+    }
+
+    [type="radio"] + label::before {
+        left: -20px;
+        top: -18px;
+        width: 51px;
+        height: 51px;
+    }
+
+    label {
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+    }  
+  }
+```  
+
+
+
+
+
+
 ### SEE UPDATE BELOW ON JS / PROJECT UPDATE
 I'm leaving this info here for learning purposes.
 
