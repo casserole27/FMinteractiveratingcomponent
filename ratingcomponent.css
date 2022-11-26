@@ -85,7 +85,6 @@ section {
 }
 
 /****** TITLE AND SUBTITLE STYLING ******/
-/*! ADDED LEGEND ******/
 
 /* h1 */
 .title  { 
@@ -119,25 +118,6 @@ section {
     }
 }
 
-
-/*! RADIO BUTTON STYLE ******/
-/*? https://www.youtube.com/watch?v=MZq5zFSpUlo */
-/*TODO Kevin Powell Videos
-/* TODO https://www.youtube.com/watch?v=MRahw3qnRBQ STYLING INPUTS ACCENT-COLOR
-/* TODO https://www.youtube.com/watch?v=EtTFEiHFjF4
-/* TODO https://www.youtube.com/watch?v=0GcTUor2ANw
-
-/* TODO BEFORE AND AFTER PSEUDO ELEMENTS
-/* TODO https://www.youtube.com/watch?v=zGiirUiWslI
-/* TODO https://www.youtube.com/watch?v=xoRbkm8XgfQ CONTENT PROPERTY*/
-
-
-/* TODO https://www.youtube.com/watch?v=BT7FZooiqWw
-
-/** COVER UP DEFAULT BROWSER RADIO INPUT
-/** OPACITY IS THE MOST ACCESSIBLE
-/** they are still there, but you can't see them */
-
 .input-div {
     display: flex;
     flex-direction: row;
@@ -149,6 +129,10 @@ label {
     margin-top: .5rem;
     margin-bottom: 2rem;
 }
+
+/*! COVER UP DEFAULT BROWSER RADIO INPUT
+/*! OPACITY IS THE MOST ACCESSIBLE
+/*! they are still there, but you can't see them */
 
 [type="radio"] {
     opacity: 0;
@@ -235,7 +219,7 @@ label {
     }
 }
 
-/****** THANK YOU STATE ******/
+/* ***** THANK YOU STATE ******/
 
 /*! JAVASCRIPT ******/
 .rating-state {
@@ -245,7 +229,7 @@ label {
 .thank-state {
     display: none;
 }
-/*! JS END ******/
+/*! JS END ***** */
 
 /****** THANK YOU IMG ******/
 

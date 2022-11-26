@@ -148,8 +148,22 @@ let selectionColor5 = document.getElementById('5');
 
  - CSS box-sizing: [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
 
- For review:
- - CSS box model: [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) 
+ - Pure CSS Custom Radio Buttons Tutorial: [YouTube](https://www.youtube.com/watch?v=BT7FZooiqWw)
+
+- Styling forms just got easier with accent-color: [YouTube](https://www.youtube.com/watch?v=MRahw3qnRBQ)
+
+- Before and After pseudo elements explained - part one: how they work: [YouTube](https://www.youtube.com/watch?v=zGiirUiWslI)
+
+- CSS Before and After pseudo elements explained - part two: the content property: [YouTube](https://www.youtube.com/watch?v=xoRbkm8XgfQ)
+
+- Pseudo-elements [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+
+- Position [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+
+- Document.querySelectorAll() [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
+
+- How to get value of selected radio button using JavaScript? [Geeksforgeeks](https://www.geeksforgeeks.org/how-to-get-value-of-selected-radio-button-using-javascript/)
+
 
  For later reference:
  
@@ -157,6 +171,9 @@ let selectionColor5 = document.getElementById('5');
  - [MDN web docs max-width](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width)
  - [MDN web docs min()](https://developer.mozilla.org/en-US/docs/Web/CSS/min)
  - [MDN web docs max()](https://developer.mozilla.org/en-US/docs/Web/CSS/max)
+
+For review:
+ - CSS box model: [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) 
 
 ## Author
 

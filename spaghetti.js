@@ -4,9 +4,6 @@
 
 
 // TODO Iterate over HTML elements?
-// https://attacomsian.com/blog/javascript-loop-dom-elements
-// https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
-// https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName
 
 // Rating and Thank you states
 let ratingPage = document.getElementById('rating-state');
@@ -43,8 +40,6 @@ console.log(inputValue);
 //! getelementbyID is the only way I can find to display the value
 //! the other options don't work
 //! but now each input has it's own ID?
-//TODO https://www.geeksforgeeks.org/how-to-get-value-of-selected-radio-button-using-javascript/
-//TODO https://stackoverflow.com/questions/9618504/how-to-get-the-selected-radio-button-s-value
 
 //* iterate over these Nodelist elements and attach a click handler
 //TODO The thank you message changes depending on 

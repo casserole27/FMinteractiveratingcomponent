@@ -23,7 +23,8 @@ let thankPage = document.getElementById('thank-state');
 const inputValue = () => {
     ratingPage.style.display = 'none';
     thankPage.style.display = 'block';
-    let input = document.querySelectorAll('input');
+    // let input = document.querySelectorAll('input');
+    let input = document.getElementsByName('rating');
 
     for (let i = 0; i < input.length; i++) {
         console.log(input[i]);
