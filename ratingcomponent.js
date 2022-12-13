@@ -36,3 +36,5 @@ const inputValue = () => {
 button.addEventListener('click', inputValue);
 
 
+//! Grace's notes
+//! https://developer.mozilla.org/en-US/docs/Web/API/FormData
