@@ -39,11 +39,9 @@ October 2022
 /****** GLOBAL STYLING ******/
 
 * {
-    /* margin: 0;
-    padding: 0; */
-    /* -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    /* -moz-box-sizing: border-box;    Firefox, other Gecko */
-    box-sizing: border-box;         Opera/IE 8+ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -51,8 +49,6 @@ body {
     background-color: black;
     /*! Grace's code and suggestions */
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
     display: grid;
     place-content: center;
 }
@@ -91,8 +87,8 @@ section {
     top: 1.5rem;
     left: 1.5rem;
     margin-bottom: 1.875rem; */
-    margin-bottom: 1rem;
     display: block;
+    margin-bottom: 2rem;
 }
 
 /* @media screen and (min-width: 800px) {
@@ -110,6 +106,7 @@ section {
     color: var(--neutral-white);
     /*! Grace */
     /* padding-left: 1.5rem; */
+    margin-bottom: .4375rem;
 }
 
 /* p */
@@ -122,7 +119,7 @@ section {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     margin-bottom: 1.5rem; */
-    margin-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 800px) {
@@ -139,85 +136,87 @@ section {
     }
 }
 
-.input-div {
+/****** RADIO BUTTON STYLING *******/
+
+/*TODO CONTAINER */
+/*! if I don't inset these flexbox selectors, then the labels and radio buttons display vertically */
+   .input-div {
     display: flex;
     flex-direction: row;
-    gap: 1.15rem;
-    /*! Grace's code and suggestions */
-    /* padding-left: .5rem; */
-    margin: 1rem 0 2rem;
-}
+    gap: 1rem;
+    margin-bottom: 2rem;
+  } 
+    
+/*TODO LABEL */ 
+/*! the following code is from moderncss.dev tutorial https://moderncss.dev/pure-css-custom-styled-radio-buttons/ */
+.form-control {
+    font-size: 1rem;
+    color: var(--neutral-white);
+    /*! from tutorial  */
+    /*??? I HAVE FUNCTIONING RADIO BUTTONS, BUT I DON'T KNOW HOW TO CENTER THE LABEL WITHIN THE RADIO CIRCLE. *?
+    /*? from tutorial: Our label is also the layout container for our design, and we're going to set it up to use CSS grid layout to take advantage of gap.*/ 
+    /* display: grid;
+    grid-template-columns: 1em auto;
+    gap: 3em;  */
+} 
 
-label {
-    /*! Grace's code and suggestions */
-    /* margin-top: .5rem;
-    margin-bottom: 2rem; */
-}
-
-/*! COVER UP DEFAULT BROWSER RADIO INPUT
-/*! OPACITY IS THE MOST ACCESSIBLE
-/*! they are still there, but you can't see them */
-
-[type="radio"] {
-    /*! Grace's code and suggestions */
-    /* opacity: 0; */
-    clip: rect(1px, 1px, 1px, 1px);
+/*TODO CUSTOM UNCHECKED RADIO STYLES*/
+input[type="radio"] {
+    appearance: none;
+    background-color: var(--neutral-dark-blue);
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    /*! from tutorial */
+    display: grid; 
+    place-content: center; /*! ALIGNS :BEFORE TO HORIZONTAL AND VERTICAL CENTER OF CUSTOM CONTROL */
+    
+    /*! GRACE'S CODE */
+    /* clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);
     height: 1px;
     width: 1px;
     margin: -1px;
     overflow: hidden;
     padding: 0;
-    position: absolute;
-} 
-
-[type="radio"] + label {
-    position: relative;
-    cursor: pointer;
-    color: var(--neutral-white);
-    transition: opacity 0.5s ease;
-}
-
-[type="radio"] + label::before {
-    /*! Grace's code and suggestions */
-    /* content: '';
-    position: absolute;
-    left: -16px;
-    top: -14px;
-    width: 42px;
-    height: 42px; */
-    background-color: var(--neutral-dark-blue);
-    border-radius: 100%;
-    opacity: .5;
-}    
-
-[type="radio"]:hover + label::before {
-    background-color: var(--primary-orange);
-}
-
-[type="radio"]:checked + label::before {
-    background: var(--neutral-light-grey);
-    
-}
-
-@media screen and (min-width: 800px) {
-    .input-div {
-        gap: 1.5rem;
-        padding-left: 1rem;
-    }
-
-    [type="radio"] + label::before {
-        left: -20px;
-        top: -18px;
-        width: 51px;
-        height: 51px;
-    }
-
-    label {
-        margin-top: 1.5rem;
-        margin-bottom: 3rem;
-    }  
+    position: absolute; */
   }
+
+/*! from tutorial  - this seems to be for radios that have label next to them */ 
+  /* .form-control + .form-control {
+    margin-top: 1em;
+} */
+
+/* TODO INPUT HOVER STATE*/
+ input[type="radio"]:hover {
+    background-color: var(--primary-orange);
+} /*! Why does label #1 stay orange?*/
+
+/*TODO RADIO STYLE CHECKED STATE*/
+/*TODO ::BEFORE REPRESENTS THE :CHECKED STATE*/
+input[type="radio"]::before {
+    content: "";
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    transform: scale(0); /*! HIDES*/
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 3.5em 3.5em var(--neutral-light-grey);
+  }
+  
+  input[type="radio"]:checked::before {
+    transform: scale(1); /*! SHOWS*/
+  }
+
+
+
+
+/*TODO FOCUS STATE?*/
+
+
 
 
 /****** BUTTON STYLING ******/

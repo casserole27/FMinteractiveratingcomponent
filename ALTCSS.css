@@ -1,0 +1,79 @@
+* .input-div {
+    display: flex;
+    flex-direction: row;
+    gap: 1.15rem;
+    /*! Grace's code and suggestions */
+    /* padding-left: .5rem; */
+    margin: 1rem 0 2rem;
+}
+
+label {
+    /*! Grace's code and suggestions */
+    /* margin-top: .5rem;
+    margin-bottom: 2rem; */
+}
+
+/*! COVER UP DEFAULT BROWSER RADIO INPUT
+/*! OPACITY IS THE MOST ACCESSIBLE
+/*! they are still there, but you can't see them */
+
+[type="radio"] {
+    /*! Grace's code and suggestions */
+    /* opacity: 0; */
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+} 
+
+[type="radio"] + label {
+    position: relative;
+    cursor: pointer;
+    color: var(--neutral-white);
+    transition: opacity 0.5s ease;
+}
+
+[type="radio"] + label::before {
+    /*! Grace's code and suggestions */
+    /* content: '';
+    position: absolute;
+    left: -16px;
+    top: -14px;
+    width: 42px;
+    height: 42px; */
+    background-color: var(--neutral-dark-blue);
+    border-radius: 100%;
+    opacity: .5;
+}    
+
+[type="radio"]:hover + label::before {
+    background-color: var(--primary-orange);
+}
+
+[type="radio"]:checked + label::before {
+    background: var(--neutral-light-grey);
+    
+}
+
+@media screen and (min-width: 800px) {
+    .input-div {
+        gap: 1.5rem;
+        padding-left: 1rem;
+    }
+
+    [type="radio"] + label::before {
+        left: -20px;
+        top: -18px;
+        width: 51px;
+        height: 51px;
+    }
+
+    label {
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+    }  
+  } */
