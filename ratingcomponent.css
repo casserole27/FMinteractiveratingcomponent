@@ -186,12 +186,6 @@ label {
     }
  
 
-
-
-
-  
-    
-
     /*! GRACE'S CODE */
     /* clip: rect(1px, 1px, 1px, 1px); /*!DEPRECATED*/
     /*clip-path: inset(50%);
@@ -202,11 +196,6 @@ label {
     padding: 0;
     position: absolute; */
   
-
-/*! from tutorial  - this seems to be for radios that have label next to them */ 
-  /* .form-control + .form-control {
-    margin-top: 1em;
-} */
 
 /* TODO INPUT HOVER STATE*/
  input[type="radio"] + label:hover {
